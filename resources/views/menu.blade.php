@@ -10,9 +10,9 @@
                             <span id="underline">Cadastros</span> 
                             <span class="caret"></span></a>
                         <ul class="dropdown-menu">                           
-                            <li><a href="product/create">Livros</a></li>                                               
-                            <li><a href="{{route('product.index')}}">Autor</a></li>                                               
-                            <li><a href="autor/create">Autores</a></li>
+                            <li><a href="{{route('product.create')}}">Livros</a></li>                                               
+                            <li><a href="{{route('autor.create')}}">Autor</a></li>                                               
+                            <li><a href="{{route('editora.create')}}">Editora</a></li>
                         </ul>
                     </li>
                     

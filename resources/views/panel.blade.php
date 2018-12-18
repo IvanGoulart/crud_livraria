@@ -11,5 +11,10 @@
                 <li><a href="{{route('autor.index')}}">Autor</a></li>                  
                 <li class="active">Alteração</li>
             </ol>              
-        </div>          
+            <br>
+            <a href="{{route('product.create')}}" 
+                class="btn btn-default btn-sm pull-right">
+                <span class="glyphicon glyphicon-plus"></span> Livro</a>
+    
+        </div>           
     </div>

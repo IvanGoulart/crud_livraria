@@ -1,6 +1,6 @@
                 @extends('layout')
 
-                @section('title', 'Autor')
+                @section('title', 'Livro')
                 @section('content')
                 <div class="row">  
                     <br>
