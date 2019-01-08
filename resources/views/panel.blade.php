@@ -1,4 +1,4 @@
-    <div class="row">
+<div class="row">
         <div class="col-md-12" id="center">              
             <h1><b>@yield('title')</b></h1>
             <br>
