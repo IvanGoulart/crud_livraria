@@ -46,9 +46,10 @@ class AutorController extends Controller
     }
 
     public function destroy($id) {
-        $product_autor = Autor::findOrFail($id);
-        $product_autor->delete();
-        return redirect()->route('autor.index')->with('message', 'Autor excluído com sucesso!');
+        $autor = Autor::findOrFail($id);
+        $autor->delete();
+        //return redirect()->route('autor.index')->with('message', 'Autor excluído com sucesso!');
+       
     }
 
 

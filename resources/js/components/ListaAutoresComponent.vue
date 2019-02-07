@@ -1,5 +1,3 @@
-
-
 <script>
     export default {
         props: ['autores'],
@@ -11,6 +9,7 @@
                
             }
         },
+ 
      
            computed: {
                fullName() {
@@ -23,16 +22,34 @@
         methods: {
             sortArrays(list) {
                     return _.orderBy(list, 'name', 'desc');
-                }
-        },
+                },
 
+            deleteEntry(id, index) {
+                
+                if (confirm("Tem certeza que deseja deletar o registro?")) {
+                    var app = this;
+                    axios.delete('/deletarautor/'+ id )
+
+                    .then(function (resp) {
+                                    
+                            app.list.splice(index, 1);
+                            location.reload(true);
+                        })
+                        .catch(function (resp) {
+                            alert("Não pode ser deletado");
+                        });
+                }
+            }
+        },
 
         mounted () {
             this.list = JSON.parse(this.autores)
 
-        }
+        },
+
         
-    }
+    };
+
 </script>
 <template>
 
@@ -64,21 +81,19 @@
                     <tr v-for="(autor, index) in fullName" v-bind:key="index" >
                         <td>{{ autor.id }}</td>
                         <td>{{ autor.name }}</td>
-
+                        
                           <td id="center">
-                                <a href="" 
-                                    data-toggle="tooltip" 
-                                    data-placement="top"
-                                    title="Alterar"><i class="fa fa-pencil"></i></a>
-                                &nbsp;<form style="display: inline-block;" method="POST" 
-                                            action=""                                                        
-                                            data-toggle="tooltip" data-placement="top"
-                                            title="Excluir" 
-                                            onsubmit="return confirm('Confirma exclusão?')">
-                                                                                 
-                                    <button type="submit" style="background-color: #fff">
-                                        <a><i class="fa fa-trash-o"></i></a>                                                    
-                                    </button></form>
+                            <router-link :to="{name: 'Autores-EditComponent', params: {id: autor.id}}" class="btn btn-xs btn-default">
+                                Editar
+                            </router-link>
+
+                               <a href="#"
+                               class="btn btn-xs btn-danger"
+                               v-on:click="deleteEntry(autor.id, index)">
+                                Delete
+                            </a>
+                               
+
                             </td>               
                                     
                     </tr>

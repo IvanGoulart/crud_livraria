@@ -19,6 +19,7 @@
       
         <div class="content">
             <div id="app">
+                
                 <example autores ="{{ $autores }}"></example>
             </div>
     

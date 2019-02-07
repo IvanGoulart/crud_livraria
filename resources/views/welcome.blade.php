@@ -6,7 +6,7 @@
         <meta name="csrf-token" content="{{  csrf_token() }}">
         
         <link rel= "stylesheet" href="{{ asset('css/app.css')}}">
-
+        <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
         <script>
             window.Laravel = {!! json_encode([
                 'csrfToken' => csrf_token(),
@@ -16,10 +16,9 @@
     <body>
         <div class="content">
             <div id="app">
-                <example></example>
+            <delete></delete>
             
             </div>
         </div>
-        <script src="{{ asset('js/app.js')}}" charset="utf-8"></script>
     </body>
 </html>
