@@ -1,10 +1,10 @@
-Clone the repository with git clone
-Copy .env.example file to .env and edit database credentials there
-Run composer install
-Run php artisan key:generate
-Run php artisan migrate
-Run npm install
-Run npm run dev
+<p>Clone the repository with git clone</p>
+<p>Copy .env.example file to .env and edit database credentials there</p>
+<p>Run composer install</p>
+<p>Run php artisan key:generate</p>
+<p>Run php artisan migrate</p>
+<p>Run npm install</p>
+<p>Run npm run dev</p>
 
 
 
