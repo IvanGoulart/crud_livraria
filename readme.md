@@ -1,3 +1,13 @@
+<p>Clone the repository with git clone</p>
+<p>Copy .env.example file to .env and edit database credentials there</p>
+<p>Run composer install</p>
+<p>Run php artisan key:generate</p>
+<p>Run php artisan migrate</p>
+<p>Run npm install</p>
+<p>Run npm run dev</p>
+
+
+
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 
 <p align="center">
