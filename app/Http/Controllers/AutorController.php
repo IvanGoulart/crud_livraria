@@ -35,13 +35,14 @@ class AutorController extends Controller
 
     public function edit($id) {
         $product_autor = Autor::findOrFail($id);
-        return view('alter-autor', compact('product_autor'));
+        return view('alterar-autor', compact('product_autor'));
     }
 
     public function update(Request $request, $id) {
-        $product_autor = Autor::findOrFail($id); 
-        $product_autor->name = $request->name;
-        $product_autor->save();
+        dd("chegou aqui");
+        $autor = Autor::findOrFail($id); 
+        $autor->name = $request->name;
+        $autor->save();
         return redirect()->route('autor.index')->with('message', 'Autor alterado com sucesso!');
     }
 
@@ -51,6 +52,12 @@ class AutorController extends Controller
         //return redirect()->route('autor.index')->with('message', 'Autor excluído com sucesso!');
        
     }
+
+    public function localiza($id) {
+        $autorlocalizado = Autor::findOrFail($id);
+        return $autorlocalizado;
+    }
+
 
 
 }
