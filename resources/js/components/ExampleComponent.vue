@@ -7,9 +7,7 @@
 
                     <div class="card-body">
                         I'm an example component.
-                        <h1> {{ this.$root.title }} </h1>
                     </div>
-                   
                 </div>
             </div>
         </div>

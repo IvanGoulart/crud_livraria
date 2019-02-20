@@ -1,44 +1,26 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Cad Livraria</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-        <nav class="navbar navbar-inverse navbar-fixed-top">       
-            <div class="collapse navbar-collapse" id="myNavbar">
-                <ul class="nav navbar-nav" id="link-white">
-                    
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" 
-                           href="#" style="text-decoration: none">
-                            <span class="glyphicon glyphicon-pencil"></span>
-                            <span id="underline">Cadastros</span> 
-                            <span class="caret"></span></a>
-                        <ul class="dropdown-menu">                           
-                            <li><a href="{{route('product.create')}}">Livros</a></li>                                               
-                            <li><a href="{{route('autor.create')}}">Autor</a></li>                                               
-                            <li><a href="{{route('editora.create')}}">Editora</a></li>
-                        </ul>
-                    </li>
-                    
-                </ul>
-                <ul class="nav navbar-nav" id="link-white">
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" 
-                           href="#" style="text-decoration: none">
-                            <span class="glyphicon glyphicon-th-list"></span>
-                            <span id="underline">Listas</span> 
-                            <span class="caret"></span></a>
-                        <ul class="dropdown-menu">                           
-                            <li><a href="/product">Livros</a></li>                                               
-                            <li><a href="/editora">Editora</a></li>                                               
-                            <li><a href="/autor">Autores</a></li>
-                        </ul>
-                    </li>
-                </ul>
-                
-                <ul class="nav navbar-nav navbar-right" id="link-white">
-                    <li><a href="\" 
-                           style="text-decoration: none">
-                            <span class="glyphicon glyphicon-log-in"></span> 
-                            <span id="underline">Sair</span></a></li>  
-                    <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
-                </ul>
-            </div>       
-        </nav>    
-     
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Lista
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="\autor">Autor</a>
+          <div class="dropdown-divider"></div>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Disabled</a>
+      </li>
+    </ul>
+  </div>
+</nav>

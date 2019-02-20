@@ -1,4 +1,5 @@
 <script>
+
     export default {
         props: ['autores'],
 
@@ -10,7 +11,6 @@
             }
         },
  
-     
            computed: {
                fullName() {
                    return this.list = JSON.parse(this.autores).filter((autor)=>{
@@ -57,8 +57,7 @@
         <div class="container">
             <form>
                 <div class="form-group">
-                <label>First Name</label>
-                <input type="text" class="form-control" placeholder="First Name" v-model="fisrtName">
+                    <input type="text" class="form-control" placeholder="Pesquisar" v-model="fisrtName">
                 </div>
                 
 
@@ -83,19 +82,14 @@
                         <td>{{ autor.name }}</td>
                         
                           <td id="center">
-                            <router-link :to="{name: 'Autores-EditComponent', params: {id: autor.id}}" class="btn btn-xs btn-default">
-                                Editar
-                            </router-link>
+                               <a :href="'/editar/' + autor.id" class="btn btn-primary">Editar</a>
 
                                <a href="#"
-                               class="btn btn-xs btn-danger"
-                               v-on:click="deleteEntry(autor.id, index)">
-                                Delete
-                            </a>
-                               
-
+                                    class="btn btn-danger"
+                                    v-on:click="deleteEntry(autor.id, index)">
+                                        Delete
+                                </a>
                             </td>               
-                                    
                     </tr>
                 </tbody>
             </table>

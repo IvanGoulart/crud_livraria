@@ -14,14 +14,10 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"> 
 
         <!-- Styles -->
-       
-        <link href="{{URL::asset('css/bootstrap.min.css')}}" rel="stylesheet" type="text/css" />       
 
         <link href="{{URL::asset('css/app.css')}}" rel="stylesheet" type="text/css" />       
-        <link href="{{URL::asset('css/style.css')}}" rel="stylesheet" type="text/css" />       
+         
         <!-- JavaScript -->
-        <script src="{{URL::asset('js/jquery.min.js')}}">  </script>  
-        <script src="{{URL::asset('js/bootstrap.min.js')}}">  </script>  
         <script>
             window.Laravel = {!! json_encode([
                 'csrfToken' => csrf_token(),
