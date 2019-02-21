@@ -19,9 +19,10 @@
       
         <div class="content">
             <div id="app">
-            <form id="app" action="/alterarautor" method="post">
+            <form id="app" action="/criarautor" method="post">
+       
             {{ csrf_field() }}
-                <editarautor></editarautor>
+                <criarautor></criarautor>
             </form>    
             </div>
     

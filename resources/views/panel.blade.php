@@ -13,9 +13,9 @@
                 <li class="active">Alteração/</li>
             </ol>              
             <br>
-            <a href="{{route('product.create')}}" 
+            <a href="{{route('criarautor')}}" 
                 class="btn btn-primary pull-right">
-                <span class="glyphicon glyphicon-plus"></span> Livro</a>
+                <span class="glyphicon glyphicon-plus"></span> Autor</a>
     
         </div>           
     </div>

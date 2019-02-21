@@ -1,10 +1,10 @@
 <template>
     <div>
-        <form action="/alterarautor/" method="POST">
             <div class="row">
                 <div class="col-xs-12 form-group">
+                    <input  name="id_autor" type="hidden" v-model="autor.id" class="form-control">
                     <label class="control-label">Nome</label>
-                    <input type="text" v-model="autor.name" class="form-control">
+                    <input name="nome_autor" type="text" v-model="autor.name" class="form-control">
                 </div>
             </div>
             <div class="row">
@@ -12,10 +12,12 @@
                     <button class="btn btn-success">Update</button>
                 </div>
             </div>
-        </form>
+       
     </div>
 </template>
 <script>
+
+
     export default {
         mounted() {
             let app = this;
@@ -42,19 +44,21 @@
                 }
             }
         },
+
         methods: {
-            saveForm() {
+            salvar:function(e) {
                 var app = this;
                 var novoAutor = app.autor;
-                alert(novoAutor);
-                axios.patch('/alterarautor/' + app.autorId, novoAutor)
+                alert(autorId);
+                axios.patch('http://localhost:8000/alterator')
                     .then(function (resp) {
                         app.$router.replace('/');
                     })
                     .catch(function (resp) {
                         console.log(resp);
-                        alert("Could not create your company");
+                        alert("Não foi possivel gravar o autor");
                     });
+
             }
         }
     }

@@ -18,15 +18,15 @@ class AutorController extends Controller
         return view('list-autores', compact('autores', 'total'));
     }
 
-    public function create() {
-        return view('include-autor');
+    public function create(Request $request) {
+        $autor = new Autor;
+        $autor->name = $request->name;
+        $autor->save();
+        return redirect()->route('autor.index')->with('message', 'Autor criado com sucesso!');
     }
 
     public function store(Request $request) {
-        $product_autor = new Autor;
-        $product_autor->name = $request->name;
-        $product_autor->save();
-        return redirect()->route('autor.index')->with('message', 'Autor criada com sucesso!');
+        return redirect()->route('autor.index');
     }
 
     public function show($id) {
@@ -38,11 +38,11 @@ class AutorController extends Controller
         return view('alterar-autor', compact('product_autor'));
     }
 
-    public function update(Request $request, $id) {
-        dd("chegou aqui");
-        $autor = Autor::findOrFail($id); 
-        $autor->name = $request->name;
-        $autor->save();
+    public function update(Request $request ) {
+        
+        $autor = Autor::findOrFail($request->id_autor); 
+        $autor->name = $request->nome_autor;
+        $autor->update();
         return redirect()->route('autor.index')->with('message', 'Autor alterado com sucesso!');
     }
 

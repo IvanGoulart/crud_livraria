@@ -13,7 +13,7 @@ window.VueAxios = require('axios').default;
 
 Vue.component('example', require('./components/ListaAutoresComponent.vue').default);
 Vue.component('editarautor', require('./components/EditarAutorComponent.vue').default);
-//Vue.component('atores', require('./components/lista-atores.vue'));
+Vue.component('criarautor', require('./components/CriarAutorComponent.vue').default);
 
 const app = new Vue({
     el: '#app',
