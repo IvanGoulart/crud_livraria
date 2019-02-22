@@ -13,7 +13,7 @@
                 Limpar
             </button>
             <button type="submit" 
-                class="btn btn-warning" id="black">
+                class="btn btn-success" id="black">
                 Cadastrar
             </button>
         </div>       

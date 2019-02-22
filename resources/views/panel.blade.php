@@ -15,7 +15,6 @@
             <br>
             <a href="{{route('criarautor')}}" 
                 class="btn btn-primary pull-right">
-                <span class="glyphicon glyphicon-plus"></span> Autor</a>
-    
+                <i class="fas fa-plus"></i> Autor</a>
         </div>           
     </div>
