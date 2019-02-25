@@ -13,8 +13,6 @@
                 <li class="active">Alteração/</li>
             </ol>              
             <br>
-            <a href="{{route('criarautor')}}" 
-                class="btn btn-primary pull-right">
-                <i class="fas fa-plus"></i> Autor</a>
+
         </div>           
     </div>

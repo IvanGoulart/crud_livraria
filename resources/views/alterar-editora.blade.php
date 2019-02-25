@@ -6,7 +6,7 @@
 <div class="row">
     <div class="col-md-12">   
         <br />
-        <h4 id="center"><b>CRIAR AUTOR</b></h4>
+        <h4 id="center"><b>ALTERAR AUTOR</b></h4>
         <br>
         @if (session('message'))
         <div class="alert alert-success alert-dismissible">
@@ -19,10 +19,9 @@
       
         <div class="content">
             <div id="app">
-            <form id="app" action="/criarautor" method="post">
-       
+            <form id="app" action="/alterareditora" method="post">
             {{ csrf_field() }}
-                <criarautor></criarautor>
+                <editareditora></editareditora>
             </form>    
             </div>
     

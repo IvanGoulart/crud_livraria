@@ -15,6 +15,10 @@ Vue.component('example', require('./components/ListaAutoresComponent.vue').defau
 Vue.component('editarautor', require('./components/EditarAutorComponent.vue').default);
 Vue.component('criarautor', require('./components/CriarAutorComponent.vue').default);
 
+Vue.component('listaeditoras', require('./components/ListaEditorasComponent.vue').default);
+Vue.component('criareditora', require('./components/CriarEditoraComponent.vue').default);
+Vue.component('editareditora', require('./components/EditarEditoraComponent.vue').default);
+
 const app = new Vue({
     el: '#app',
 

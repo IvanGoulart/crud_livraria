@@ -1,7 +1,7 @@
 <script>
 
     export default {
-        props: ['autores'],
+        props: ['editoras'],
 
         data () {
             return {
@@ -13,9 +13,9 @@
  
            computed: {
                fullName() {
-                   return this.list = JSON.parse(this.autores).filter((autor)=>{
+                   return this.list = JSON.parse(this.editoras).filter((editora)=>{
                        
-                        return autor.name.match(this.fisrtName)
+                        return editora.name.match(this.fisrtName)
                    })
                }
            },
@@ -24,11 +24,11 @@
                     return _.orderBy(list, 'name', 'desc');
                 },
 
-            deleteEntry(id, index) {
+            deleteEditora(id, index) {
                 
                 if (confirm("Tem certeza que deseja deletar o registro?")) {
                     var app = this;
-                    axios.delete('/deletarautor/'+ id )
+                    axios.delete('/deletareditora/'+ id )
 
                     .then(function (resp) {
                                     
@@ -43,7 +43,7 @@
         },
 
         mounted () {
-            this.list = JSON.parse(this.autores)
+            this.list = JSON.parse(this.editoras)
 
         },
 
@@ -54,7 +54,7 @@
 <template>
 
     <div>
-        <a :href="/criarautor/" class="btn btn-primary pull-right"><i class="fas fa-plus"></i> Autor</a>
+        <a :href="/criareditora/" class="btn btn-primary pull-right"><i class="fas fa-plus"></i> Editora</a>
         <br><br><br>
         <div class="container">
             <form>
@@ -79,16 +79,16 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr v-for="(autor, index) in fullName" v-bind:key="index" >
-                        <td>{{ autor.id }}</td>
-                        <td>{{ autor.name }}</td>
+                    <tr v-for="(editora, index) in fullName" v-bind:key="index" >
+                        <td>{{ editora.id }}</td>
+                        <td>{{ editora.name }}</td>
                         
                           <td id="center">
-                               <a :href="'/editarautor/' + autor.id" class="btn btn-primary">Editar</a>
+                               <a :href="'/editareditora/' + editora.id" class="btn btn-primary">Editar</a>
 
                                <a href="#"
                                     class="btn btn-danger"
-                                    v-on:click="deleteEntry(autor.id, index)">
+                                    v-on:click="deleteEditora(editora.id, index)">
                                         Delete
                                 </a>
                             </td>               
