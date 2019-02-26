@@ -11,7 +11,7 @@ class Editora extends Model
     protected $table = 'editoras';
 
 
-    public function produtos (){
-        return $this->hasMany('App\Produto');
+    public function livros (){
+        return $this->hasMany('App\Model\Livro');
     }
 }

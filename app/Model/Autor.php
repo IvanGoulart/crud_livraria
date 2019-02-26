@@ -10,8 +10,9 @@ class Autor extends Model
     protected $guarded = ['id', 'created_at', 'update_at'];
     protected $table = 'autores';
 
-    public function produtos (){
-        return $this->hasMany('App\Produto');
+    public function livros (){
+        return $this->hasMany('App\Model\Livro');
+        
     }
 
 }

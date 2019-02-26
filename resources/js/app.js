@@ -19,10 +19,12 @@ Vue.component('listaeditoras', require('./components/ListaEditorasComponent.vue'
 Vue.component('criareditora', require('./components/CriarEditoraComponent.vue').default);
 Vue.component('editareditora', require('./components/EditarEditoraComponent.vue').default);
 
+Vue.component('listalivros', require('./components/ListaLivrosComponent.vue').default);
+Vue.component('editarlivro', require('./components/EditarLivroComponent.vue').default);
+
+
 const app = new Vue({
     el: '#app',
-
-   
 
 });
 

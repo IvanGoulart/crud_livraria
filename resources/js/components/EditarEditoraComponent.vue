@@ -9,7 +9,7 @@
             </div>
             <div class="row">
                 <div class="col-xs-12 form-group">
-                    <button class="btn btn-success">Update</button>
+                    <button class="btn btn-success">Alterar</button>
                 </div>
             </div>
        

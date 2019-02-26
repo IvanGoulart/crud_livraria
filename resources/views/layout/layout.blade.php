@@ -30,8 +30,7 @@
         @endcomponent
         <div id="line-one">
             <div class="container">
-            @component('panel')
-            @endcomponent
+          
                 @yield('content')
 
             </div>

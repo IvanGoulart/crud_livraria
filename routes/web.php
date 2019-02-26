@@ -6,13 +6,8 @@ Route::get('/', function () {
 });
 
 Route::resource('autor','AutorController');
-
 Route::resource('product','ProdutoController');
-
 Route::resource('editora','EditoraController');
-
-
-
 
 Route::get('gravarautor/{id}', 'AutorController@update')->name('gravar');
 Route::get('editarautor/{id}', 'AutorController@edit')->name('editar');
@@ -28,8 +23,6 @@ Route::delete('deletarautor/{id}', [
     'uses' => 'AutorController@destroy'
 ]);
 
-
-
 Route::get('/criareditora', function () {
     return view('criar-editora');
 });
@@ -43,3 +36,8 @@ Route::delete('deletareditora/{id}', [
     'as' => 'deletar',
     'uses' => 'EditoraController@destroy'
 ]);
+
+Route::resource('livro','LivroController');
+Route::get('editarlivro/{id}', 'LivroController@edit')->name('editarlivro');
+Route::get('localizalivro/{id}', 'LivroController@localiza')->name('localizalivro');
+Route::post('alterarlivro', 'LivroController@update')->name('alterlivro');
