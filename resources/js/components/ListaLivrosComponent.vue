@@ -44,7 +44,7 @@
 </script>
 <template>
     <div>
-        <a :href="/criarautor/" class="btn btn-primary pull-right"><i class="fas fa-plus"></i> Autor</a>
+        <a :href="/criarlivro/" class="btn btn-primary pull-right"><i class="fas fa-plus"></i> Livros</a>
         <br><br><br>
         <div class="container">
             <form>

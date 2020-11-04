@@ -2,8 +2,20 @@
     <div>
         <div class="col-md-6">              
             <div class="form-group">
-                <label for="name">Nome</label>
+                <label for="name">Titulo</label>
                 <input type="text" name="name" 
+                    class="form-control" 
+                    required>
+            </div>
+            <div class="form-group">
+                <label for="name">Editora</label>
+                <input type="text" name="editora" 
+                    class="form-control" 
+                    required>
+            </div>
+            <div class="form-group">
+                <label for="name">Autor</label>
+                <input type="text" name="autor" 
                     class="form-control" 
                     required>
             </div>

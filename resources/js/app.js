@@ -21,6 +21,7 @@ Vue.component('editareditora', require('./components/EditarEditoraComponent.vue'
 
 Vue.component('listalivros', require('./components/ListaLivrosComponent.vue').default);
 Vue.component('editarlivro', require('./components/EditarLivroComponent.vue').default);
+Vue.component('criarlivro', require('./components/CriarLivroComponent.vue').default);
 
 
 const app = new Vue({

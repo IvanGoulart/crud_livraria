@@ -2,7 +2,7 @@
 
 
 Route::get('/', function () {
-    return view('app');
+    return redirect('autor');
 });
 
 Route::resource('autor','AutorController');
@@ -38,6 +38,11 @@ Route::delete('deletareditora/{id}', [
 ]);
 
 Route::resource('livro','LivroController');
+
+Route::get('/criarlivro', function () {
+    return view('criar-livro');
+});
+Route::post('criarlivro', 'LivroController@create')->name('criarlivro');
 Route::get('editarlivro/{id}', 'LivroController@edit')->name('editarlivro');
 Route::get('localizalivro/{id}', 'LivroController@localiza')->name('localizalivro');
 Route::post('alterarlivro', 'LivroController@update')->name('alterlivro');

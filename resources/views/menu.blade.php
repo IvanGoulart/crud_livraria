@@ -14,9 +14,14 @@
           Lista
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-        <a class="dropdown-item" href="\autor">Autor</a>
-        <div class="dropdown-divider"></div>
-        <a class="dropdown-item" href="\editora">Editora</a>
+          <a class="dropdown-item" href="\autor">Autor</a>
+          <div class="dropdown-divider">
+          </div>
+          <a class="dropdown-item" href="\editora">Editora</a>
+          <div class="dropdown-divider">
+          </div>
+          <a class="dropdown-item" href="\livro">Livros</a>
+
         </div>
       </li>
       <li class="nav-item">
